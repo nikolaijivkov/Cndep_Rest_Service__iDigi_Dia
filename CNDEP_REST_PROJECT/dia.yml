@@ -1,0 +1,14 @@
+
+presentations: 
+  - name: web0
+    driver: presentations.web.web:Web
+    settings: 
+        page: "web"
+        title: "Channel Web Presentation"
+
+services: 
+  - name: cndep_rest0
+    driver: custom_services.cndep_rest:Restful
+    settings: 
+        server_ip: "192.168.33.106"
+        server_port: 8080

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service label="CNDEP Restful Web Service">
+  <driver>custom_services.cndep_rest:Restful</driver>
+  <description>CNDEP Restful Web Service.
+    
+Provide a meaning to do Restful oriented service, capable of extracting sensor data (real or emulated) and converting that data in simple xml.
+Operations below are managed in a Restful way:
+  POST   - add sensor device to the list of devices;
+  PUT    - edit existing device in the list;/remove sensor devices (real or emulated);
+  GET    - extract data from sensors on one or multiple devices on the list and convert that data in simple xml;
+  DELETE - remove sensor device from the list of devices.
+GET, PUT, POST and DELETE are http methods used for the current operation.
+for more accurate description try [ip]:[port]//cndep/help once the service is started.
+  </description>
+  <generic_name>cndep_rest</generic_name>
+  <icon>icons/web2.png</icon>
+  <settings>
+    <setting label="Server ip">
+      <type>string</type>
+      <required>True</required>
+      <default>192.168.33.106</default>
+      <tooltip>The ip address of the CNDEP Restful web server.</tooltip>
+      <yml_field>server_ip</yml_field>
+    </setting>
+    <setting label="Server port">
+      <type>integer</type>
+      <required>True</required>
+      <default>8080</default>
+      <tooltip>The port of the CNDEP Restful web server.</tooltip>
+      <yml_field>server_port</yml_field>
+    </setting>
+  </settings>
+</service>

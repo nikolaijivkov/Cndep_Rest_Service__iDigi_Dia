@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation label="MS_HealthVault">
+  <driver>custom_presentations.ms_health_vault:MSHealthVault</driver>
+  <is_thread>true</is_thread>
+  <description>MS HealthVault presentation.</description>
+  <generic_name>ms_healthvault</generic_name>
+  <icon>icons/web2.png</icon>
+  <settings>
+    <setting label="Server ip">
+      <type>string</type>
+      <required>True</required>
+      <default>192.168.33.106</default>
+      <tooltip>The ip address of the MS_HV web server.</tooltip>
+      <yml_field>server_ip</yml_field>
+    </setting>
+    <setting label="Server port">
+      <type>integer</type>
+      <required>True</required>
+      <default>8081</default>
+      <tooltip>The port of the MS_HV web server.</tooltip>
+      <yml_field>server_port</yml_field>
+    </setting>
+  </settings>
+</presentation>
